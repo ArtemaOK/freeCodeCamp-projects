@@ -11,7 +11,7 @@
 // For this challenge you will be presented with a string such as 800-692-7753 or 8oo-six427676;laskdjf. Your job is to validate or reject the US phone number based on any combination of the formats provided above. The area code is required. If the country code is provided, you must confirm that the country code is 1. Return true if the string is a valid US phone number; otherwise return false.
 
 function telephoneCheck(str) {
-    // Formato 555-555-5555
+    // Format 555-555-5555
     function f1(str) {
         if (str[0] + str[1] + str[2] <= 999 && str[0] + str[1] + str[2] >= 0 &&
             str[3] == '-' &&
@@ -21,7 +21,7 @@ function telephoneCheck(str) {
             return true
         }
     }
-    // Formato (555)555-5555
+    // Format (555)555-5555
     function f2(str) {
         if (str[0] == '(' &&
             str[1] + str[2] + str[3] <= 999 && str[1] + str[2] + str[3] >= 0 &&
@@ -32,7 +32,7 @@ function telephoneCheck(str) {
             return true
         }
     }
-    // Formato (555) 555-5555
+    // Format (555) 555-5555
     function f3(str) {
         if (str[0] == '(' &&
             str[1] + str[2] + str[3] <= 999 && str[1] + str[2] + str[3] >= 0 &&
@@ -43,7 +43,7 @@ function telephoneCheck(str) {
             return true
         }
     }
-    // Formato 555 555 5555
+    // Format 555 555 5555
     function f4(str) {
         if (str[0] + str[1] + str[2] <= 999 && str[0] + str[1] + str[2] >= 0 &&
             str[3] == ' ' &&
@@ -53,13 +53,13 @@ function telephoneCheck(str) {
             return true
         }
     }
-    // Formato 5555555555
+    // Format 5555555555
     function f5(str) {
         if (str.length == 10 && str <= 9999999999 && str >= 0) {
             return true
         }
     }
-    // Formato 1 555 555 5555
+    // Format 1 555 555 5555
     function f6(str) {
         if (str[0] == 1 &&
             str[1] + str[2] + str[3] <= 999 && str[1] + str[2] + str[3] >= 0 &&
@@ -70,13 +70,13 @@ function telephoneCheck(str) {
             return true
         }
     }
-    // Función 5 pero con código internacional
+    // function f5 but with international code
     function f7(str) {
         if (str.length == 11 && str <= 19999999999 && str >= 0) {
             return true
         }
     }
-    // Función 1 pero formato "1 555-555-5555"
+    // function f1 but format "1 555-555-5555"
     function f8(str) {
         if (str[0] == 1 && str[1] == ' ' &&
             str[2] + str[3] + str[4] <= 999 && str[2] + str[3] + str[4] >= 0 &&
@@ -87,7 +87,7 @@ function telephoneCheck(str) {
             return true
         }
     }
-    // Función 3 pero formato "1 (555) 555-5555"
+    // function f3 but format "1 (555) 555-5555"
     function f9(str) {
         if (str[0] == 1 && str[1] == ' ' && str[2] == '(' &&
             str[3] + str[4] + str[5] <= 999 && str[3] + str[4] + str[5] >= 0 &&
@@ -98,7 +98,7 @@ function telephoneCheck(str) {
             return true
         }
     }
-    // Función 2 pero formato "1(555)555-5555"
+    // function f2 but format "1(555)555-5555"
     function f10(str) {
         if (str[0] == 1 && str[1] == '(' &&
             str[2] + str[3] + str[4] <= 999 && str[2] + str[3] + str[4] >= 0 &&
@@ -109,7 +109,7 @@ function telephoneCheck(str) {
             return true
         }
     }
-    // Función 4 pero formato "1 555 555 5555"
+    // function f4 but format "1 555 555 5555"
     function f11(str) {
         if (str[0] == 1 && str[1] == ' ' &&
             str[2] + str[3] + str[4] <= 999 && str[2] + str[3] + str[4] >= 0 &&
